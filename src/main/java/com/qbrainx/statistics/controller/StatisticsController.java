@@ -27,6 +27,11 @@ public class StatisticsController {
         return responseEntity;
     }
 
+    @GetMapping("/welcome")
+    public String createTransaction(@RequestParam String user) {
+        return "welcome" + user;
+    }
+
     @GetMapping("/statistics")
     public ResponseEntity getStatistics() {
         Statistics statistics = statisticsService.getStatistics();
